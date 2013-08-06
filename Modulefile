@@ -1,0 +1,5 @@
+name 'resolv_conf'
+version '0.0.1'
+dependency 'puppetlabs/stdlib', '>=4.1.0'
+summary 'Manage /etc/resolv.conf on Enterprise Linux Servers'
+description ''
