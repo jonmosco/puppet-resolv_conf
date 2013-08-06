@@ -4,7 +4,7 @@
 #
 # Include safe defaults
 #
-class resolv_conf (
+class resolver (
   $nameserver = '127.0.0.1',
   $domain     = undef,
   $search     = undef,
@@ -12,6 +12,13 @@ class resolv_conf (
   $options    = undef,
 ) {
 
+  if is_string($nameserver) {
+    $_nameserver = [$nameserver]
+  } else {
+    $_nameserver = $nameserver
+  }
+
+  validate_array($_nameserver)
   validate_string($domain)
   validate_slength($search, 256)
   validate_array($sortlist)
@@ -26,6 +33,6 @@ class resolv_conf (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template('puppet-resolv_conf/resolv.conf.erb'),
+    content => template('resolver/resolv.conf.erb'),
   }
 }

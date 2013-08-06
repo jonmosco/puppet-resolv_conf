@@ -1,5 +1,15 @@
-nameserver <%= @nameserver %>
+<% if @domain -%>
 domain <%= @domain %>
+<% end -%>
+<% @_nameserver.each do |ns| -%>
+nameserver <%= ns %>
+<% end -%>
+<% if @search -%>
 search <%= @search %>
+<% end -%>
+<% if @softlist %>
 sortlist <%= @sortlist %>
+<% end -%>
+<% if @options %>
 options <%= @options %>
+<% end -%>
