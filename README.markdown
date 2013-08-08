@@ -1,13 +1,13 @@
-#modulename
+#resolv_conf
 
 ####Table of Contents
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with resolvconf](#setup)
-    * [What resolvconf affects](#what-resolvconf-affects)
+3. [Setup - The basics of getting started with resolv_conf](#setup)
+    * [What resolv_conf affects](#what-resolv_conf-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with resolvconf](#beginning-with-resolvconf)
+    * [Beginning with resolv_conf](#beginning-with-resolv_conf)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -15,17 +15,15 @@
 
 ##Overview
 
-The resolvconf module configures /etc/resolv.conf on Linux based systems.
+The resolv_conf module configures /etc/resolv.conf on Linux based systems.
 
 ##Module Description
 
-If applicable, this section should have a brief description of the technology the module integrates with and what that integration enables. This section should answer the questions: "What does this module *do*?" and "Why would I use it?"
-
-If your module has a range of functionality (installation, configuration, management, etc.) this is the time to mention it.
+resolv_conf module will manage the configuration of the /etc/resolv.conf on Linux based systems
 
 ##Setup
 
-###What resolvconf affects
+###What resolv_conf affects
 
 * If the contents of /etc/resolv.conf are being managed by Network Manager, it will get overwritten
 
@@ -33,19 +31,34 @@ If your module has a range of functionality (installation, configuration, manage
 
 This module assumes that the network configuration is not being managed by Network Manager.
 
-###Beginning with resolver
+[Requires Puppetlabs stdlib module](https://forge.puppetlabs.com/puppetlabs/stdlib)
 
-The very basic steps needed for a user to get the module up and running.
+###Beginning with resolv_conf
 
-If your most recent release breaks compatibility or requires particular steps for upgrading, you may wish to include an additional section here: Upgrading (For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
 
 ##Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here.
+Class: resolv_conf
+
+Parameters:
+
+        $nameserver
+        IP address in dot notation of your name servers
+
+        $domain
+        Local domain
+
+        $search
+        Please refer to the resolv.conf(5) manual page
+
+        $sortlist (optional)
+        Optional parameter that defaults to your netmask
+
+        $options (optional)
+        Please refer to the resolv.conf(5) manual page
 
 ##Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module. This section should include all of the under-the-hood workings of your module so people know what the module is touching on their system but don't need to mess with things. (We are working on automating this section!)
 
 ##Limitations
 
@@ -57,3 +70,5 @@ This module follows the manual page provided on Linux systems.  If adding any op
 
 ##Release Notes/Contributors/Etc
 
+Contributions from:
+Thomas Linkin <tom@puppetlabs.com>
