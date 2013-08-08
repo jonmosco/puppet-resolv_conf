@@ -1,4 +1,4 @@
-# == class: puppet-resolv_conf
+# == class: resolv_conf
 #
 # == Parameters
 #
@@ -22,7 +22,7 @@
 # Thomas Linkin <tom@puppetlabs.com>
 # Jon Mosco <jonny.mosco@gmail.com>
 #
-class puppet-resolv_conf (
+class resolv_conf (
   $nameserver = '127.0.0.1',
   $domain     = undef,
   $search     = undef,
@@ -51,6 +51,6 @@ class puppet-resolv_conf (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template('puppet-resolv_conf/resolv.conf.erb'),
+    content => template(resolv_conf/resolv.conf.erb'),
   }
 }
