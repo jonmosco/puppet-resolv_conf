@@ -15,7 +15,7 @@
 
 ##Overview
 
-The resolvconf module will configures /etc/resolv.conf on Linux basesed systems.
+The resolvconf module configures /etc/resolv.conf on Linux based systems.
 
 ##Module Description
 
@@ -27,9 +27,7 @@ If your module has a range of functionality (installation, configuration, manage
 
 ###What resolvconf affects
 
-* A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+* If the contents of /etc/resolv.conf are being managed by Network Manager, it will get overwritten
 
 ###Setup Requirements
 
@@ -51,13 +49,11 @@ Here, list the classes, types, providers, facts, etc contained in your module. T
 
 ##Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Tested on Debian and RedHat based Linux distributions.
 
 ##Development
 
-Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
+This module follows the manual page provided on Linux systems.  If adding any options, please consult the man page first.
 
-##Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should consider using changelog). You may also add any additional sections you feel are necessary or important to include here. Please use the `## ` header.
+##Release Notes/Contributors/Etc
 
