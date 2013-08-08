@@ -1,10 +1,28 @@
-# /etc/resolv.conf management
+# == class: puppet-resolv_conf
 #
-# Very early design
+# == Parameters
 #
-# Include safe defaults
+# $nameserver
+# IP address in dot notation of your name servers
 #
-class resolver (
+# $domain
+# Local domain
+
+# $search
+# Please refer to the resolv.conf(5) manual page
+#
+# $sortlist (optional)
+# Optional parameter that defaults to your netmask
+#
+# $options (optional)
+# Please refer to the resolv.conf(5) manual page
+#
+# == Authors
+#
+# Thomas Linkin <tom@puppetlabs.com>
+# Jon Mosco <jonny.mosco@gmail.com>
+#
+class puppet-resolv_conf (
   $nameserver = '127.0.0.1',
   $domain     = undef,
   $search     = undef,
@@ -33,6 +51,6 @@ class resolver (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template('resolver/resolv.conf.erb'),
+    content => template('puppet-resolv_conf/resolv.conf.erb'),
   }
 }
