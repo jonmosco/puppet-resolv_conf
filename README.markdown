@@ -7,9 +7,7 @@
 3. [Setup - The basics of getting started with resolv_conf](#setup)
     * [What resolv_conf affects](#what-resolv_conf-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with resolv_conf](#beginning-with-resolv_conf)
 4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
 6. [Development - Guide for contributing to the module](#development)
 
@@ -33,22 +31,16 @@ This module assumes that the network configuration is not being managed by Netwo
 
 [Requires Puppetlabs stdlib module](https://forge.puppetlabs.com/puppetlabs/stdlib)
 
-###Beginning with resolv_conf
+##Usage
 
-To install resolv_conf:
-
-        $ sudo puppet module install jonnyx/resolv_conf
+Class: resolv_conf
 
         class { 'resolv_conf':
           nameserver => '192.168.1.20',
           domain     => 'example.com',
         }
 
-##Usage
-
-Class: resolv_conf
-
-#Parameters:
+##Parameters:
 
         $nameserver
         IP address in dot notation of your name servers
@@ -64,9 +56,6 @@ Class: resolv_conf
 
         $options (optional)
         Please refer to the resolv.conf(5) manual page
-
-##Reference
-
 
 ##Limitations
 
