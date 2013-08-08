@@ -35,12 +35,20 @@ This module assumes that the network configuration is not being managed by Netwo
 
 ###Beginning with resolv_conf
 
+To install resolv_conf:
+
+        $ sudo puppet module install jonnyx/resolv_conf
+
+        class { 'resolv_conf':
+          nameserver => '192.168.1.20',
+          domain     => 'example.com',
+        }
 
 ##Usage
 
 Class: resolv_conf
 
-Parameters:
+#Parameters:
 
         $nameserver
         IP address in dot notation of your name servers
