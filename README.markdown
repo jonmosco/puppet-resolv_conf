@@ -71,4 +71,5 @@ This module follows the manual page provided on Linux systems.  If adding any op
 ##Release Notes/Contributors/Etc
 
 Contributions from:
-Thomas Linkin <tom@puppetlabs.com>
+
+        Thomas Linkin <tom@puppetlabs.com>
