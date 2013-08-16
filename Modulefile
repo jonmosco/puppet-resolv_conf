@@ -1,5 +1,5 @@
 name 'puppet-resolv_conf'
-version '0.0.1'
-dependency 'puppetlabs/stdlib', '>=4.1.0'
+version '0.0.2'
+dependency 'puppetlabs/stdlib', '>=3.1.0'
 summary 'Manage /etc/resolv.conf on Enterprise Linux Servers'
 description 'The resolv_conf module configures /etc/resolv.conf on Linux based systems.'
