@@ -7,7 +7,7 @@
 #
 # $domain
 # Local domain
-
+#
 # $search
 # Please refer to the resolv.conf(5) manual page
 #
@@ -41,7 +41,7 @@ class resolv_conf (
   validate_slength($search, 256)
   validate_array($sortlist)
 
-  if count($sortlist) > 10 {
+  if size($sortlist) > 10 {
     fail('sortlist can not contain more than 10 addresses')
   }
 
