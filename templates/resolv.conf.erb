@@ -7,7 +7,7 @@ nameserver <%= ns %>
 <% if @search -%>
 search <%= @search %>
 <% end -%>
-<% if !sortlist.empty? -%>
+<% if !@sortlist.empty? -%>
 sortlist <%= @sortlist.join(' ') %>
 <% end -%>
 <% if @options -%>
