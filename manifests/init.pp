@@ -48,8 +48,8 @@ class resolv_conf (
   file { 'resolv.conf':
     ensure  => file,
     path    => '/etc/resolv.conf',
-    owner   => 'root',
-    group   => 'root',
+    owner   => 0,
+    group   => 0,
     mode    => '0644',
     content => template('resolv_conf/resolv.conf.erb'),
   }
