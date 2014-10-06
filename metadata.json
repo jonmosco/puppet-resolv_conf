@@ -1,0 +1,41 @@
+{
+  "name": "jonnyx/resolv_conf",
+  "version": "0.1.0",
+  "author": "jonnyx",
+  "summary": "Manage /etc/resolv.conf on Enterprise Linux Servers",
+  "license": "Apache Version 2.0",
+  "source": "https://github.com/jonmosco/puppet-resolv_conf",
+  "project_page": "https://github.com/jonmosco/puppet-resolv_conf",
+  "operatingsystem_support": [
+  {
+    "operatingsystem": "RedHat"
+      "operatingsystemrelease": [
+      "5",
+      "6",
+    ]
+  },
+  {
+    "operatingsystem": "CentOS"
+      "operatingsystemrelease": [
+      "5",
+      "6",
+    ]
+  },
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.x"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_range": ">= 3.2.0"
+    },
+  ]
+}
