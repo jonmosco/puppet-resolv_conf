@@ -80,4 +80,4 @@ This module follows the manual page provided on Linux systems.  If adding any op
 
 Contributions from:
 
-        Thomas Linkin <tom@puppetlabs.com>
+  Thomas Linkin <tom@puppetlabs.com>
