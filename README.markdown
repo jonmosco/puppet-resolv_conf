@@ -8,8 +8,9 @@
     * [What resolv_conf affects](#what-resolv_conf-affects)
     * [Setup requirements](#setup-requirements)
 4. [Usage - Configuration options and additional functionality](#usage)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+6. [Limitations - OS compatibility, etc.](#limitations)
+7. [Development - Guide for contributing to the module](#development)
 
 ##Overview
 
@@ -41,6 +42,14 @@ class { 'resolv_conf':
   domain     => 'example.com',
 }
 ```
+
+##Reference
+
+###Classes
+
+####Public Classes
+
+* resolv_conf: Main class
 
 ##Parameters:
 
