@@ -34,8 +34,8 @@ This module assumes that the network configuration is not being managed by Netwo
 ##Usage
 
 Class: resolv_conf
-```puppet
 
+```puppet
 class { 'resolv_conf':
   nameserver => '192.168.1.20',
   domain     => 'example.com',
