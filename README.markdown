@@ -43,6 +43,11 @@ class { 'resolv_conf':
 }
 ```
 
+Hiera
+```puppet
+resolv_conf:nameserver: 192.168.1.20
+```
+
 ##Reference
 
 ###Classes
