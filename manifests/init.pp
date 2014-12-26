@@ -23,8 +23,8 @@
 # Jon Mosco <jonny.mosco@gmail.com>
 #
 class resolv_conf (
-  $nameserver = '127.0.0.1',
   $domain     = undef,
+  $nameserver = '127.0.0.1',
   $search     = undef,
   $sortlist   = [],
   $options    = undef,
