@@ -17,7 +17,6 @@ describe 'resolv_conf' do
     let(:params) {{
       :domain => 'localdomain',
     }}
-
     it do
       should contain_file('resolv.conf').with \
         .with_content(/# resolv.conf: Managed by puppet\.\n#\ndomain localdomain\nnameserver 127.0.0.1/)
@@ -38,7 +37,6 @@ describe 'resolv_conf' do
     let(:params) {{
       :search => 'localdomain',
     }}
-
     it do
       should contain_file('resolv.conf').with \
         .with_content(/# resolv.conf: Managed by puppet\.\n#\nnameserver 127.0.0.1\nsearch localdomain/)
