@@ -1,6 +1,6 @@
 {
   "name": "jonnyx-resolv_conf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "jonnyx",
   "summary": "Manage /etc/resolv.conf on Enterprise Linux Servers",
   "license": "Apache-2.0",
