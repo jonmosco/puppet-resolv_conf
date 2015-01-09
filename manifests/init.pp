@@ -2,11 +2,11 @@
 #
 # == Parameters
 #
-# $nameserver
-# IP address in dot notation of your name servers
-#
 # $domain
 # Local domain
+
+# $nameserver
+# IP address in dot notation of your name servers
 #
 # $search
 # Please refer to the resolv.conf(5) manual page
@@ -36,10 +36,11 @@ class resolv_conf (
     $_nameserver = $nameserver
   }
 
-  validate_array($_nameserver)
   validate_string($domain)
+  validate_array($_nameserver)
   validate_slength($search, 256)
   validate_array($sortlist)
+  validate_string($options)
 
   if size($sortlist) > 10 {
     fail('sortlist can not contain more than 10 addresses')

@@ -1,8 +1,8 @@
 {
   "name": "jonnyx-resolv_conf",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "jonnyx",
-  "summary": "Manage /etc/resolv.conf on Enterprise Linux Servers",
+  "summary": "Manage /etc/resolv.conf on Linux Servers",
   "license": "Apache-2.0",
   "source": "https://github.com/jonmosco/puppet-resolv_conf",
   "project_page": "https://github.com/jonmosco/puppet-resolv_conf",
