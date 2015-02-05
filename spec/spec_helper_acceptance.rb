@@ -6,7 +6,7 @@ hosts.each do |host|
   install_puppet
 end
 
-UNSUPPORTED_PLATFORMS = ['Suse','windows','AIX','Solaris']
+UNSUPPORTED_PLATFORMS = ['Suse','windows','Solaris']
 
 RSpec.configure do |c|
   # Project root
