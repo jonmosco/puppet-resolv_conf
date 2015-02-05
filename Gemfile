@@ -5,8 +5,6 @@ group :development, :test do
   gem 'rspec-puppet',            :require => false
   gem 'puppetlabs_spec_helper',  :require => false
   gem 'puppet-lint',             :require => false
-  #gem 'beaker', :git => 'https://github.com/electrical/beaker.git', :branch => 'vagrant_stderr'
-  #gem 'beaker-rspec',            :require => false
   gem 'beaker',                  :require => false
   gem 'beaker-rspec',            :require => false
   gem 'serverspec',              :require => false
