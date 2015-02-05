@@ -1,4 +1,5 @@
 #resolv_conf
+[![Build Status](https://travis-ci.org/jonmosco/puppet-resolv_conf.svg?branch=master)](https://travis-ci.org/jonmosco/puppet-resolv_conf)
 
 ####Table of Contents
 
