@@ -3,11 +3,11 @@
 <% if @domain -%>
 domain <%= @domain %>
 <% end -%>
-<% @_nameserver.each do |ns| -%>
-nameserver <%= ns %>
-<% end -%>
 <% if @search -%>
 search <%= @search %>
+<% end -%>
+<% @_nameserver.each do |ns| -%>
+nameserver <%= ns %>
 <% end -%>
 <% if !@sortlist.empty? -%>
 sortlist <%= @sortlist.join(' ') %>
