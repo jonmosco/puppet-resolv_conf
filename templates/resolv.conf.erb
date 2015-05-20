@@ -6,12 +6,12 @@ domain <%= @domain %>
 <% if @search -%>
 search <%= @search %>
 <% end -%>
-<% @_nameserver.each do |ns| -%>
-nameserver <%= ns %>
-<% end -%>
 <% if !@sortlist.empty? -%>
 sortlist <%= @sortlist.join(' ') %>
 <% end -%>
 <% if @options -%>
 options <%= @options %>
+<% end -%>
+<% @_nameserver.each do |ns| -%>
+nameserver <%= ns %>
 <% end -%>
