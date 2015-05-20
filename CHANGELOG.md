@@ -1,3 +1,9 @@
+##2015-05-19 - Release 1.0.4
+###Summary
+
+- Cleaup up README.md
+- Change ordering in template
+
 ##2015-02-05 - Release 1.0.3
 ###Summary
 
