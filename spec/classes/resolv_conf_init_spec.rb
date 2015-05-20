@@ -39,7 +39,7 @@ describe 'resolv_conf' do
     }}
     it do
       should contain_file('resolv.conf').with \
-        .with_content(/# resolv.conf: Managed by puppet\.\n#\nnameserver 127.0.0.1\nsearch localdomain/)
+        .with_content(/# resolv.conf: Managed by puppet\.\n#\nsearch localdomain\nnameserver 127.0.0.1/)
     end
   end
 
