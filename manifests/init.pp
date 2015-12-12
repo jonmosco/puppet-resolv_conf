@@ -36,6 +36,12 @@ class resolv_conf (
     $_nameserver = $nameserver
   }
 
+  if is_string($search) {
+    $_search = [$search]
+  } else {
+    $_search = $search
+  }
+
   validate_string($domain)
   validate_array($_nameserver)
   validate_slength($search, 256)
