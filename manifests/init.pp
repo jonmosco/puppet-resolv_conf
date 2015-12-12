@@ -25,7 +25,7 @@
 class resolv_conf (
   $domain     = undef,
   $nameserver = '127.0.0.1',
-  $search     = [],
+  $search     = undef,
   $sortlist   = [],
   $options    = undef,
 ) {
@@ -36,9 +36,15 @@ class resolv_conf (
     $_nameserver = $nameserver
   }
 
+  if is_string($search) {
+    $_search = [$search]
+  } else {
+    $_search = $search
+  }
+
   validate_string($domain)
   validate_array($_nameserver)
-  validate_array($search)
+  validate_array($_search)
   validate_array($sortlist)
   validate_string($options)
 
