@@ -36,15 +36,17 @@ class resolv_conf (
     $_nameserver = $nameserver
   }
 
-  if is_string($search) {
+  if $search == undef {
+    $_search = $search
+  }elsif is_string($search) {
     $_search = [$search]
   } else {
     $_search = $search
+    validate_array($_search)
   }
 
   validate_string($domain)
   validate_array($_nameserver)
-  validate_array($_search)
   validate_array($sortlist)
   validate_string($options)
 

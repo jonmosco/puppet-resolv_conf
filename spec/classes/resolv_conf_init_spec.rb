@@ -33,6 +33,13 @@ describe 'resolv_conf' do
     end
   end
 
+  context "with no search" do
+    it do
+      should contain_file('resolv.conf').with \
+        .with_content(/# resolv.conf: Managed by puppet\.\n#\nnameserver 127.0.0.1/)
+    end
+  end
+
   context "with search => localdomain" do
     let(:params) {{
       :search => 'localdomain',
@@ -40,6 +47,16 @@ describe 'resolv_conf' do
     it do
       should contain_file('resolv.conf').with \
         .with_content(/# resolv.conf: Managed by puppet\.\n#\nsearch localdomain\nnameserver 127.0.0.1/)
+    end
+  end
+
+  context "with search => [localdomain, local]" do
+    let(:params) {{
+      :search => ['localdomain','local']
+    }}
+    it do
+      should contain_file('resolv.conf').with \
+        .with_content(/# resolv.conf: Managed by puppet\.\n#\nsearch localdomain local\nnameserver 127.0.0.1/)
     end
   end
 

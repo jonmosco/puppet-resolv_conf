@@ -3,8 +3,10 @@
 <% if @domain -%>
 domain <%= @domain %>
 <% end -%>
-<% if @_search -%>
-search <%= @search.join(' ') %>
+<% if @_search.is_a? Array -%>
+search <%= @_search.join(' ') %>
+<% elsif ! @_search.nil? -%>
+search <%= @_search %>
 <% end -%>
 <% if !@sortlist.empty? -%>
 sortlist <%= @sortlist.join(' ') %>

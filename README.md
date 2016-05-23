@@ -59,13 +59,13 @@ resolv_conf::nameserver: 192.168.1.20
 
 ##Parameters:
 
-        $nameserver
+        $nameserver (default: 127.0.0.1)
         IP address in dot notation of your name servers
 
-        $domain
+        $domain (optional)
         Local domain
 
-        $search
+        $search (optional, String or Array)
         Please refer to the resolv.conf(5) manual page
 
         $sortlist (optional)
